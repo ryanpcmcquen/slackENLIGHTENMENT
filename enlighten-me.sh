@@ -30,43 +30,43 @@ ROOT=$(pwd)
 
 sbopkg -r
 ## grab these from SBo
-if [ -z "$( ls /var/log/packages/ | grep lua )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep lua- )" ]; then
   sbopkg -B -i lua
 fi
-if [ -z "$( ls /var/log/packages/ | grep luajit )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep luajit- )" ]; then
   sbopkg -B -i luajit
 fi
-if [ -z "$( ls /var/log/packages/ | grep bullet )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep bullet- )" ]; then
   sbopkg -B -i bullet
 fi
-if [ -z "$( ls /var/log/packages/ | grep libwebp )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep libwebp- )" ]; then
   sbopkg -B -i libwebp
 fi
-if [ -z "$( ls /var/log/packages/ | grep connman )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep connman- )" ]; then
   sbopkg -B -i connman
 fi
 if [ -z "$( ls /var/log/packages/ | grep orc- )" ]; then
   sbopkg -B -i orc
 fi
-if [ -z "$( ls /var/log/packages/ | grep gstreamer1 )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep gstreamer1- )" ]; then
   sbopkg -B -i gstreamer1
 fi
-if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-base )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-base- )" ]; then
   sbopkg -B -i gst1-plugins-base
 fi
-if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-good )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-good- )" ]; then
   sbopkg -B -i gst1-plugins-good
 fi
-if [ -z "$( ls /var/log/packages/ | grep json-c )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep json-c- )" ]; then
   sbopkg -B -i json-c
 fi
-if [ -z "$( ls /var/log/packages/ | grep speex )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep speex- )" ]; then
   sbopkg -B -i speex
 fi
-if [ -z "$( ls /var/log/packages/ | grep pulseaudio )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep pulseaudio- )" ]; then
   sbopkg -B -i pulseaudio
 fi
-if [ -z "$( ls /var/log/packages/ | grep alsa-plugins )" ]; then
+if [ -z "$( ls /var/log/packages/ | grep alsa-plugins- )" ]; then
   sbopkg -B -i alsa-plugins
 fi
 
