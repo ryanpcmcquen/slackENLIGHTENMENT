@@ -1,0 +1,55 @@
+--- efl.SlackBuild	2014-10-28 08:58:30.524917292 -0700
++++ EFL.SlackBuild	2014-10-28 09:06:27.045884708 -0700
+@@ -1,8 +1,6 @@
+ #!/bin/sh
+ 
+-# Slackware build script for efl
+-
+-# Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
++# Slackware build script for EFL
+ 
+ # Copyright 2013-2014 Willy Sudiarto Raharjo <willysr@slackware-id.org>
+ # All rights reserved.
+@@ -24,9 +22,10 @@
+ #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
+-PRGNAM=efl
++PRGNAM=EFL
++SRCNAM=efl
+ VERSION=${VERSION:-1.11.4}
+-BUILD=${BUILD:-1sEL}
++BUILD=${BUILD:-1wsr}
+ 
+ if [ -z "$ARCH" ]; then
+   case "$( uname -m )" in
+@@ -38,7 +37,7 @@
+ 
+ CWD=$(pwd)
+ TMP=${TMP:-/tmp/build}
+-PKG=$TMP/package-$PRGNAM
++PKG=$TMP/package-$SRCNAM
+ OUTPUT=${OUTPUT:-/tmp}
+ 
+ if [ "$ARCH" = "i486" ]; then
+@@ -60,9 +59,9 @@
+ rm -rf $PKG
+ mkdir -p $TMP $PKG $OUTPUT
+ cd $TMP
+-rm -rf $PRGNAM-$VERSION
+-tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+-cd $PRGNAM-$VERSION
++rm -rf $SRCNAM-$VERSION
++tar xvf $CWD/$SRCNAM-$VERSION.tar.gz
++cd $SRCNAM-$VERSION
+ chown -R root:root .
+ find -L . \
+  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
+@@ -85,7 +84,6 @@
+   --disable-tslib \
+   --disable-static \
+   --with-profile=release \
+-  --enable-image-loader-webp \
+   --enable-lua-old \
+   --build=$ARCH-slackware-linux
+ 

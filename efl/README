@@ -1,0 +1,5 @@
+efl is a core set of libraries providing a great deal of functionality.
+
+Optional requirements:
+- ibus
+- c-ares
