@@ -84,7 +84,6 @@ CXXFLAGS="$SLKCFLAGS" \
   --enable-fb \
   --disable-tslib \
   --disable-static \
-  --with-profile=release \
   --enable-lua-old \
   --build=$ARCH-slackware-linux
 
