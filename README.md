@@ -4,8 +4,8 @@ Thanks to willysr and GArik for all their work on builds.
 
 I've made what I like to call a 'greatest hits' of their work.
 
-We have the standard SBo style here thanks to Willy! 
-
+We have the standard SBo style here thanks to Willy! These scripts are nearly a blatant copy of his work (with the ```sEL``` tag), and an automatic build script that gets the dependencies using sbopkg. 
+I also added some configure flags and explicitly set MAKEFLAGS.
 
 I've made the script automatic so all you have to is run:
 
@@ -29,6 +29,4 @@ Complete Build Order :
 - enlightenment
 
 Note:
-You will need to remove all packages before installing/upgrading
-to a newer version to ensure that all libraries all linked to the
-proper version.
+You will need to remove all packages before installing/upgrading to a newer version to ensure that all libraries all linked to the proper version.
