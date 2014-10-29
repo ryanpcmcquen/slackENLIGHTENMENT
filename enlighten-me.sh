@@ -80,6 +80,7 @@ sh download.sh
 # Loop for all packages
 for dir in \
   efl \
+  e_dbus \
   elementary \
   evas-generic-loaders \
   emotion-generic-players \
