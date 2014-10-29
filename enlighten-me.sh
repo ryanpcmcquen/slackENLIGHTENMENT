@@ -28,6 +28,9 @@ TMP=${TMP:-/tmp}
 # This is the original directory where you started this script
 ROOT=$(pwd)
 
+## explicitly set MAKEFLAGS, otherwise builds will fail
+export MAKEFLAGS=-j1
+
 sbopkg -r
 ## grab these from SBo
 if [ -z "$( ls /var/log/packages/ | grep lua- )" ]; then
@@ -54,9 +57,9 @@ fi
 if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-base- )" ]; then
   sbopkg -B -i gst1-plugins-base
 fi
-##if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-good- )" ]; then
-##  sbopkg -B -i gst1-plugins-good
-##fi
+if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-good- )" ]; then
+  sbopkg -B -i gst1-plugins-good
+fi
 if [ -z "$( ls /var/log/packages/ | grep json-c- )" ]; then
   sbopkg -B -i json-c
 fi
