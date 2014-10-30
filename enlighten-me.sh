@@ -116,5 +116,8 @@ if [ -z "$( cat /etc/slackpkg/blacklist | grep [0-9]+sEL )" ]; then
   echo [0-9]+sEL >> /etc/slackpkg/blacklist
 fi
 
-cp /etc/asound.conf /etc/asound.conf.old
+if [ -z "$( ls /etc/asound.conf.old )" ]; then
+  cp /etc/asound.conf /etc/asound.conf.old
+fi
 wget -N https://raw.githubusercontent.com/ryanpcmcquen/linuxTweaks/master/pulseaudio/asound.conf -P /etc/
+
