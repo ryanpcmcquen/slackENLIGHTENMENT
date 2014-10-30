@@ -11,7 +11,7 @@ Simply run:
 
     sh enlighten-me.sh
 
-And all the source tarballs will be downloaded, built and installed.
+And all the source tarballs will be downloaded, built and installed. Note that pulseaudio will be installed and configured. You can modify efl with ```--disable-pulseaudio``` but then you will NOT have sound. Read *pulseaudio-warning* to learn more.
 
 Any dependencies will be grabbed with ```sbopkg``` so make sure you have it!
 
@@ -34,4 +34,4 @@ The script will automatically add ```[0-9]+sEL``` to /etc/slackpkg/blacklist, so
 Enjoy!
 
 Note:
-You will need to remove all packages before installing/upgrading to a newer version to ensure that all libraries all linked to the proper version.
+You will need to remove all ```sEL``` packages before installing/upgrading to a newer version to ensure that all libraries all linked to the proper version.
