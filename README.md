@@ -11,7 +11,7 @@ Simply run:
 
     sh enlighten-me.sh
 
-And all the source tarballs will be downloaded, built and installed. Note that pulseaudio will be installed and configured. You can modify efl with ```--disable-pulseaudio``` but then you will NOT have sound. Read *pulseaudio-warning* to learn more.
+And all the source tarballs will be downloaded, built and installed. Note that pulseaudio will be installed and configured. You can modify efl with ```--disable-pulseaudio```, but then you will NOT have sound. Read *pulseaudio-warning* to learn more.
 
 Any dependencies will be grabbed with ```sbopkg``` so make sure you have it!
 
