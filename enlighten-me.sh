@@ -63,6 +63,7 @@ fi
 #  sbopkg -B -i gst1-plugins-good
 #fi
 
+##### begin pulseaudio stuff
 if [ -z "$( ls /var/log/packages/ | grep json-c- )" ]; then
   sbopkg -B -i json-c
 fi
@@ -75,6 +76,11 @@ fi
 if [ -z "$( ls /var/log/packages/ | grep alsa-plugins- )" ]; then
   sbopkg -B -i alsa-plugins
 fi
+if [ -z "$( ls /etc/asound.conf.old )" ]; then
+  cp /etc/asound.conf /etc/asound.conf.old
+fi
+wget -N https://raw.githubusercontent.com/ryanpcmcquen/linuxTweaks/master/pulseaudio/asound.conf -P /etc/
+##### end of pulseaudio stuff
 
 # get source balls
 sh download.sh
@@ -118,9 +124,4 @@ done
 if [ -z "$( cat /etc/slackpkg/blacklist | grep [0-9]+sEL )" ]; then
   echo [0-9]+sEL >> /etc/slackpkg/blacklist
 fi
-
-if [ -z "$( ls /etc/asound.conf.old )" ]; then
-  cp /etc/asound.conf /etc/asound.conf.old
-fi
-wget -N https://raw.githubusercontent.com/ryanpcmcquen/linuxTweaks/master/pulseaudio/asound.conf -P /etc/
 
