@@ -21,7 +21,7 @@ for pkg in $PKGS; do
 
   if [ "$ARCH" = "x86_64" ]; then
     case $pkg in
-      nvidia-bumblebee)
+      *)
         DOWNLOAD=$(echo $DOWNLOAD | cut -d ' ' -f2-)
         DOWNLOAD="$DOWNLOAD $DOWNLOAD_x86_64"
 
