@@ -1,7 +1,7 @@
 PRGNAM="terminology"
 VERSION="0.7.0"
 HOMEPAGE="http://enlightenment.org/p.php?p=about/terminology"
-DOWNLOAD="http://download.enlightenment.org/rel/apps/terminology/terminology-0.7.0.tar.xz"
+DOWNLOAD="http://download.enlightenment.org/rel/apps/terminology/terminology-$VERSION.tar.xz"
 MD5SUM=""
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
