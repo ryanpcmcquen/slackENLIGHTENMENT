@@ -130,3 +130,12 @@ if [ -z "$( cat /etc/slackpkg/blacklist | grep [0-9]+sEL )" ]; then
   echo [0-9]+sEL >> /etc/slackpkg/blacklist
 fi
 
+echo
+echo
+echo "*------------------------------*"
+echo "You are ready to be ENLIGHTENED!"
+echo "*------------------------------*"
+echo
+echo
+
+
