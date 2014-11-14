@@ -109,11 +109,12 @@ for dir in \
   cd $ROOT/$dir || exit 1 
 
   # Get the version
-  version=$(cat ${package}.SlackBuild | grep "VERSION:" | cut -d "-" -f2 | rev | cut -c 2- | rev)
+  #version=$(cat ${package}.info | grep "VERSION:" | cut -d "-" -f2 | rev | cut -c 2- | rev)
+  version=$(cat ${package}.info | grep "VERSION=" | cut -d "=" -f2 | rev | cut -c 2- | rev | cut -c 2-)
 
   # The real build starts here
   sh ${package}.SlackBuild || exit 1
-  PACKAGE="${package}-$version-*.txz"
+  PACKAGE="${package}-$version-*sEL.txz"
   if [ -f $TMP/$PACKAGE ]; then
     upgradepkg --install-new --reinstall $TMP/$PACKAGE
   else

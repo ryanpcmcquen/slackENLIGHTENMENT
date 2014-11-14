@@ -25,7 +25,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=efl
-VERSION=${VERSION:-1.11.4}
+VERSION=$(echo $PRGNAM-*.tar.xz | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
 BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
@@ -86,9 +86,10 @@ CXXFLAGS="$SLKCFLAGS" \
   --disable-static \
   --with-profile=release \
   --enable-lua-old \
-  --enable-multisense \
   --enable-image-loader-xyz=auto \
+  --enable-alsa \
   --disable-pulseaudio \
+  --enable-i-really-know-what-i-am-doing-and-that-this-will-probably-break-things-and-i-will-fix-them-myself-and-send-patches-aba \
   --build=$ARCH-slackware-linux
 
 make
