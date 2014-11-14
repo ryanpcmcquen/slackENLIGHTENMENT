@@ -26,7 +26,7 @@
 
 PRGNAM=evas-generic-loaders
 SRCNAM=evas_generic_loaders
-VERSION=${VERSION:-1.11.2}
+VERSION=$(echo $SRCNAM-*.tar.xz | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
 BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then

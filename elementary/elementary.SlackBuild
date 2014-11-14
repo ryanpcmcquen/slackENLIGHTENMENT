@@ -25,7 +25,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=elementary
-VERSION=${VERSION:-1.11.4}
+VERSION=$(echo $PRGNAM-*.tar.xz | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
 BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
