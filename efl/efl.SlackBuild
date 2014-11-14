@@ -88,6 +88,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --enable-lua-old \
   --enable-multisense \
   --enable-image-loader-xyz=auto \
+  --disable-pulseaudio \
   --build=$ARCH-slackware-linux
 
 make
