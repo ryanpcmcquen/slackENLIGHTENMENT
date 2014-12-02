@@ -28,68 +28,26 @@ TMP=${TMP:-/tmp}
 # This is the original directory where you started this script
 ROOT=$(pwd)
 
-## explicitly set MAKEFLAGS, otherwise builds will fail
-export MAKEFLAGS=-j1
+sbo_pkg_install() {
+  SBO_PACKAGE=$1
+  sbopkg -B -k -i $SBO_PACKAGE
+}
 
 sbopkg -r
 ## grab these from SBo
-if [ -z "$( ls /var/log/packages/ | grep lua- )" ]; then
-  sbopkg -B -i lua
-fi
-if [ -z "$( ls /var/log/packages/ | grep luajit- )" ]; then
-  sbopkg -B -i luajit
-fi
-if [ -z "$( ls /var/log/packages/ | grep bullet- )" ]; then
-  sbopkg -B -i bullet
-fi
-if [ -z "$( ls /var/log/packages/ | grep libwebp- )" ]; then
-  sbopkg -B -i libwebp
-fi
+sbo_pkg_install lua
+sbo_pkg_install luajit
+sbo_pkg_install bullet
+sbo_pkg_install libwebp
+sbo_pkg_install orc
+sbo_pkg_install gstreamer1
+sbo_pkg_install gst1-plugins-base
 
-
-## going without connman/econnman for now
-#if [ -z "$( ls /var/log/packages/ | grep connman- )" ]; then
-#  sbopkg -B -i connman
-#fi
-
-
-if [ -z "$( ls /var/log/packages/ | grep orc- )" ]; then
-  sbopkg -B -i orc
-fi
-if [ -z "$( ls /var/log/packages/ | grep gstreamer1- )" ]; then
-  sbopkg -B -i gstreamer1
-fi
-if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-base- )" ]; then
-  sbopkg -B -i gst1-plugins-base
-fi
-
-## broken on current, and we don't need it
-#if [ -z "$( ls /var/log/packages/ | grep gst1-plugins-good- )" ]; then
-#  sbopkg -B -i gst1-plugins-good
-#fi
-
-##### begin pulseaudio stuff
-#if [ -z "$( ls /var/log/packages/ | grep json-c- )" ]; then
-#  sbopkg -B -i json-c
-#fi
-#if [ -z "$( ls /var/log/packages/ | grep speex- )" ]; then
-#  sbopkg -B -i speex
-#fi
-#if [ -z "$( ls /var/log/packages/ | grep pulseaudio- )" ]; then
-#  sbopkg -B -i pulseaudio
-#fi
-#if [ -z "$( ls /var/log/packages/ | grep alsa-plugins- )" ]; then
-#  sbopkg -B -i alsa-plugins
-#fi
-#if [ -z "$( ls /etc/asound.conf.old )" ]; then
-#  cp /etc/asound.conf /etc/asound.conf.old
-#fi
-#wget -N https://raw.githubusercontent.com/ryanpcmcquen/linuxTweaks/master/pulseaudio/asound.conf -P /etc/
-##### end of pulseaudio stuff
+## explicitly set MAKEFLAGS, otherwise builds will fail
+export MAKEFLAGS=-j1
 
 # get source balls
 sh download.sh
-
 
 # Loop for all packages
 for dir in \
@@ -102,14 +60,13 @@ for dir in \
   python-efl \
   enlightenment \
   ; do
-  # Get the package name
+  # get the package name
   package=$(echo $dir | cut -f2- -d /) 
   
   # Change to package directory
   cd $ROOT/$dir || exit 1 
 
   # Get the version
-  #version=$(cat ${package}.info | grep "VERSION:" | cut -d "-" -f2 | rev | cut -c 2- | rev)
   version=$(cat ${package}.info | grep "VERSION=" | cut -d "=" -f2 | rev | cut -c 2- | rev | cut -c 2-)
 
   # The real build starts here
