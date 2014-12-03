@@ -30,7 +30,7 @@ ROOT=$(pwd)
 
 sbo_pkg_install() {
   SBO_PACKAGE=$1
-  if [ ! -e /var/log/packages/$SBO_PACKAGE* ]; then
+  if [ ! -e /var/log/packages/$SBO_PACKAGE-* ]; then
     sbopkg -B -i $SBO_PACKAGE
   fi
 }
