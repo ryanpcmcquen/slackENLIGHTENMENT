@@ -3,18 +3,18 @@
 ARCH=$(uname -m)
 PKGS=$(find -type f -name '*.info' -exec basename {} .info \;)
 
-checksum()
-{
-  sum=$(md5sum $1 | cut -d ' ' -f1)
-
-  if [ "$sum" != "$2" ]; then
-    echo ""
-    echo "WARNING: checksum failed: $1"
-    echo ""
-
-    sleep 2
-  fi
-}
+##checksum()
+##{
+##  sum=$(md5sum $1 | cut -d ' ' -f1)
+##
+##  if [ "$sum" != "$2" ]; then
+##    echo ""
+##    echo "WARNING: checksum failed: $1"
+##    echo ""
+##
+##    sleep 2
+##  fi
+##}
 
 for pkg in $PKGS; do
   . $pkg/$pkg.info
@@ -28,9 +28,6 @@ for pkg in $PKGS; do
         MD5SUM=$(echo $MD5SUM | cut -d ' ' -f2-)
         MD5SUM="$MD5SUM $MD5SUM_x86_64"
         ;;
-      *)
-        DOWNLOAD=${DOWNLOAD_x86_64:-$DOWNLOAD}
-        MD5SUM=${MD5SUM_x86_64:-$MD5SUM}
     esac
   fi
 
@@ -49,19 +46,19 @@ for pkg in $PKGS; do
       src=$PRGNAM-$VERSION.$ext
     fi
 
-    if [ -e "$pkg/$src" ]; then
-      if [ -f "$pkg/$src" ]; then
-        checksum $pkg/$src ${MD5SUM[$i]}
-      fi
-
-      continue;
-    fi
+##    if [ -e "$pkg/$src" ]; then
+##      if [ -f "$pkg/$src" ]; then
+##        checksum $pkg/$src ${MD5SUM[$i]}
+##      fi
+##
+##      continue;
+##    fi
 
     file=$(cd $pkg; find ../ -type f -name $src)
 
     if [ -z "$file" ]; then
       wget -O $pkg/$src ${DOWNLOAD[$i]}
-      checksum $pkg/$src ${MD5SUM[$i]}
+##      checksum $pkg/$src ${MD5SUM[$i]}
     else
       ln -sf $file $pkg
     fi
