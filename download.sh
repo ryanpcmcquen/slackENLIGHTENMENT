@@ -46,19 +46,14 @@ for pkg in $PKGS; do
       src=$PRGNAM-$VERSION.$ext
     fi
 
-##    if [ -e "$pkg/$src" ]; then
-##      if [ -f "$pkg/$src" ]; then
-##        checksum $pkg/$src ${MD5SUM[$i]}
-##      fi
-##
-##      continue;
-##    fi
+    if [ -e "$pkg/$src" ]; then
+      continue;
+    fi
 
     file=$(cd $pkg; find ../ -type f -name $src)
 
     if [ -z "$file" ]; then
       wget -O $pkg/$src ${DOWNLOAD[$i]}
-##      checksum $pkg/$src ${MD5SUM[$i]}
     else
       ln -sf $file $pkg
     fi
