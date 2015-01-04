@@ -30,10 +30,10 @@ VERSION=$(echo $SRCNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
 BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
-  case "$( uname -m )" in
+  case "$(uname -m)" in
     i?86) ARCH=i486 ;;
     arm*) ARCH=arm ;;
-       *) ARCH=$( uname -m ) ;;
+       *) ARCH=$(uname -m) ;;
   esac
 fi
 
