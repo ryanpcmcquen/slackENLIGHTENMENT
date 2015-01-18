@@ -30,7 +30,7 @@ ROOT=$(pwd)
 
 sbo_pkg_install() {
   SBO_PACKAGE=$1
-  if [ ! -e /var/log/packages/$SBO_PACKAGE-* ]; then
+  if [ -z "`find /var/log/packages/ -name $SBO_PACKAGE-*`" ]; then
     ## fix for sqg confusion
     echo p | sbopkg -B -i $SBO_PACKAGE
   fi
@@ -45,9 +45,6 @@ sbo_pkg_install libwebp
 sbo_pkg_install orc
 sbo_pkg_install gstreamer1
 sbo_pkg_install gst1-plugins-base
-
-## explicitly set MAKEFLAGS, otherwise builds will fail
-export MAKEFLAGS=-j1
 
 # get source balls
 sh download.sh
