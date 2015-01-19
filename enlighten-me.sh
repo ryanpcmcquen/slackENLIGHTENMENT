@@ -45,6 +45,7 @@ sbo_pkg_install libwebp
 sbo_pkg_install orc
 sbo_pkg_install gstreamer1
 sbo_pkg_install gst1-plugins-base
+sbo_pkg_install e_dbus
 
 # get source balls
 sh download.sh
@@ -52,7 +53,6 @@ sh download.sh
 # Loop for all packages
 for dir in \
   efl \
-  e_dbus \
   elementary \
   evas-generic-loaders \
   emotion-generic-players \

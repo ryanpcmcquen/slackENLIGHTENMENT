@@ -24,7 +24,6 @@ for pkg in $PKGS; do
       *)
         DOWNLOAD=$(echo $DOWNLOAD | cut -d ' ' -f2-)
         DOWNLOAD="$DOWNLOAD $DOWNLOAD_x86_64"
-
         MD5SUM=$(echo $MD5SUM | cut -d ' ' -f2-)
         MD5SUM="$MD5SUM $MD5SUM_x86_64"
         ;;
