@@ -1,5 +1,5 @@
 PRGNAM="python-efl"
-VERSION="1.12.0"
+VERSION="1.13.0"
 HOMEPAGE="http://www.enlightenment.org/"
 DOWNLOAD="http://download.enlightenment.org/rel/bindings/python/python-efl-$VERSION.tar.bz2"
 MD5SUM=""
