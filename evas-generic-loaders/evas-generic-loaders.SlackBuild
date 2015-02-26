@@ -38,7 +38,7 @@ if [ -z "$ARCH" ]; then
 fi
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/build}
+TMP=${TMP:-/tmp/sEL-build}
 PKG=$TMP/package-$SRCNAM
 OUTPUT=${OUTPUT:-/tmp}
 
