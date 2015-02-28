@@ -31,8 +31,8 @@ ROOT=$(pwd)
 sbo_pkg_install() {
   SBO_PACKAGE=$1
   if [ -z "`find /var/log/packages/ -name $SBO_PACKAGE-*`" ]; then
-    ## fix for sqg confusion
-    echo p | sbopkg -B -i $SBO_PACKAGE
+    ## `echo p` fixes sqg confusion
+    echo p | sbopkg -B -e stop -i $SBO_PACKAGE
   fi
 }
 
