@@ -83,7 +83,7 @@ for dir in \
   cd $ROOT
 done
 
-if [ -z "$(cat /etc/slackpkg/blacklist | grep [0-9]+sEL)" ]; then
+if [ -z "$(cat /etc/slackpkg/blacklist | grep sEL)" ]; then
   echo [0-9]+sEL >> /etc/slackpkg/blacklist
 fi
 
