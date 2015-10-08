@@ -1,5 +1,5 @@
 PRGNAM="enlightenment"
-VERSION="0.19.11"
+VERSION="0.19.12"
 HOMEPAGE="http://www.enlightenment.org/"
 DOWNLOAD="http://download.enlightenment.org/rel/apps/enlightenment/enlightenment-$VERSION.tar.xz"
 MD5SUM=""
