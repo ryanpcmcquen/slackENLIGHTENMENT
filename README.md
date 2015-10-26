@@ -13,6 +13,11 @@ Simply run:
     cd slackENLIGHTENMENT/
     sh enlighten-me.sh
 
+## ON STABLE REMEMBER TO UNCOMMENT THESE LINES:
+
+https://github.com/ryanpcmcquen/slackENLIGHTENMENT/blob/master/enlighten-me.sh#L46-L48
+
+
 All the tarballs will be downloaded, built and installed.  Pulseaudio is no longer part of the build, and sound works in Firefox, Chromium, Spotify and Steam. The only thing you are losing out on is Enlightenment's interface sounds.
 
 Any dependencies will be grabbed with ```sbopkg``` so make sure you have it!
