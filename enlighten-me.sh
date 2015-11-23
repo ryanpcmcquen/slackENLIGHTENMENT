@@ -54,12 +54,12 @@ sh download.sh
 for dir in \
   efl \
   e_dbus \
-  elementary \
-  evas-generic-loaders \
   emotion-generic-players \
-  terminology \
+  evas-generic-loaders \
+  elementary \
   python-efl \
   enlightenment \
+  terminology \
   ; do
   # get the package name
   package=$(echo $dir | cut -f2- -d /) 
@@ -68,7 +68,7 @@ for dir in \
   cd $ROOT/$dir || exit 1 
 
   # Get the version
-  version=$(cat ${package}.info | grep "VERSION=" | cut -d "=" -f2 | rev | cut -c 2- | rev | cut -c 2-)
+  version=$(grep "VERSION=" ${package}.info | cut -d "=" -f2 | rev | cut -c 2- | rev | cut -c 2-)
 
   # The real build starts here
   sh ${package}.SlackBuild || exit 1
@@ -84,7 +84,7 @@ for dir in \
   cd $ROOT
 done
 
-if [ -z "$(cat /etc/slackpkg/blacklist | grep sEL)" ]; then
+if [ -z "$(grep sEL /etc/slackpkg/blacklist)" ]; then
   echo [0-9]+sEL >> /etc/slackpkg/blacklist
 fi
 
