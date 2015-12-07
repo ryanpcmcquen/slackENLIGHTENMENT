@@ -1,4 +1,4 @@
-Finally! E19 for Slackware!
+Finally! E20 for Slackware!
 
 Thanks to willysr and GArik for all their work on builds.
 
