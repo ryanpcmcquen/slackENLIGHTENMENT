@@ -96,7 +96,7 @@ mv $PKG/etc/xdg/menus/e-applications.menu $PKG/etc/xdg/menus/e-applications.menu
 
 # Handle the xinitrc file
 mkdir -p $PKG/etc/X11/xinit
-cat $CWD/xinitrc.enlightenment19 > $PKG/etc/X11/xinit/xinitrc.enlightenment19.new
+cat $CWD/xinitrc.slackENLIGHTENMENT > $PKG/etc/X11/xinit/xinitrc.slackENLIGHTENMENT.new
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
