@@ -10,4 +10,4 @@ config() {
 
 config etc/enlightenment/sysactions.conf.new
 config etc/xdg/menus/e-applications.menu.new
-config etc/X11/xinit/xinitrc.enlightenment19.new
+config etc/X11/xinit/xinitrc.slackENLIGHTENMENT.new
