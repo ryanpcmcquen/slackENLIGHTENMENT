@@ -1,4 +1,4 @@
-Finally! E20 for Slackware!
+Finally! A cutting edge Enlightenment for Slackware!
 
 Thanks to willysr and GArik for all their work on builds.
 
