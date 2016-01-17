@@ -42,10 +42,6 @@ sbo_pkg_install lua
 sbo_pkg_install luajit
 sbo_pkg_install bullet
 sbo_pkg_install libwebp
-## uncomment these for slackware-stable
-#sbo_pkg_install orc
-#sbo_pkg_install gstreamer1
-#sbo_pkg_install gst1-plugins-base
 
 # get source balls
 sh download.sh
