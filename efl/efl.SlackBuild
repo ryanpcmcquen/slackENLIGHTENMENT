@@ -87,9 +87,6 @@ CXXFLAGS="$SLKCFLAGS" \
   --with-profile=release \
   --enable-lua-old \
   --enable-image-loader-xyz=auto \
-  --enable-alsa \
-  --disable-pulseaudio \
-  --enable-i-really-know-what-i-am-doing-and-that-this-will-probably-break-things-and-i-will-fix-them-myself-and-send-patches-aba \
   --build=$ARCH-slackware-linux
 
 make -j1
