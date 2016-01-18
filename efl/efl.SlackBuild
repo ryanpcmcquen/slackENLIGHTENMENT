@@ -73,6 +73,7 @@ find -L . \
 autoreconf -vi
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
+LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
@@ -87,6 +88,8 @@ CXXFLAGS="$SLKCFLAGS" \
   --with-profile=release \
   --enable-lua-old \
   --enable-image-loader-xyz=auto \
+  --enable-xinput22 \
+  --enable-multisense \
   --build=$ARCH-slackware-linux
 
 make -j1
