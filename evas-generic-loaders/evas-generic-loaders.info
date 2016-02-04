@@ -1,5 +1,5 @@
 PRGNAM="evas-generic-loaders"
-VERSION="1.16.0"
+VERSION="1.17.0"
 HOMEPAGE="http://www.enlightenment.org/"
 DOWNLOAD="http://download.enlightenment.org/rel/libs/evas_generic_loaders/evas_generic_loaders-$VERSION.tar.xz"
 MD5SUM=""
