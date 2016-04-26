@@ -1,8 +1,0 @@
-PRGNAM="enlightenment"
-VERSION="0.20.6"
-HOMEPAGE="http://www.enlightenment.org/"
-DOWNLOAD="http://download.enlightenment.org/rel/apps/enlightenment/enlightenment-$VERSION.tar.xz"
-MD5SUM=""
-DOWNLOAD_x86_64=""
-MD5SUM_x86_64=""
-REQUIRES="efl elementary"
