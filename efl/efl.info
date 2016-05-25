@@ -1,5 +1,5 @@
 PRGNAM="efl"
-VERSION="1.17.0"
+VERSION="1.17.1"
 HOMEPAGE="http://www.enlightenment.org/"
 DOWNLOAD="http://download.enlightenment.org/rel/libs/efl/efl-$VERSION.tar.xz"
 MD5SUM=""
