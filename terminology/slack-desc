@@ -6,12 +6,12 @@
 # customary to leave one space after the ':' except on otherwise blank lines.
 
            |-----handy-ruler------------------------------------------------------|
-terminology: terminology (terminal emulator)
+terminology: terminology (Terminal emulator)
 terminology:
-terminology: The best terminal emulator written with the EFL.
+terminology: Terminology is a terminal emulator for Linux/BSD/UNIX etc.
+terminology: systems that uses EFL and has a whole bunch of bells and whistles.
 terminology:
-terminology:
-terminology: homepage: https://www.enlightenment.org
+terminology: https://www.enlightenment.org
 terminology:
 terminology:
 terminology:
