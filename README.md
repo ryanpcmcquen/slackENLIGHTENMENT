@@ -24,10 +24,6 @@ Enjoy!
 
 Complete Build Order :
 - efl
-- e_dbus
-- elementary
-- evas-generic-loaders
-- emotion-generic-players
 - terminology
 - python-efl
 - enlightenment
