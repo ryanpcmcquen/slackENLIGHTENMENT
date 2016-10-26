@@ -1,11 +1,5 @@
-The best terminal emulator written with the EFL.
-
-This release features:
-
-    text reflow on resize,
-    full 256 colors support,
-    improved terminal compatibility,
-    improved selection handling,
-    backscroll compression to reduce memory usage,
-    many bug fixes,
-    and more!
+Ephoto is a comprehensive image/photo viewer written in C
+and using the Enlightened Foundation Libraries. The
+application supports file system browsing for photos and
+images, enhancement and editing features, and moving
+slideshows.
