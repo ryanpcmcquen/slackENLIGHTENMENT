@@ -46,13 +46,9 @@ sbo_pkg_install libwebp
 # get source balls
 sh download.sh
 
-# Loop for all packages
+# Loop for all packages:
 for dir in \
   efl \
-  e_dbus \
-  emotion-generic-players \
-  evas-generic-loaders \
-  elementary \
   python-efl \
   enlightenment \
   terminology \
