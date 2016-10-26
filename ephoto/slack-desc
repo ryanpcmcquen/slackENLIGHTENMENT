@@ -8,8 +8,8 @@
       |-----handy-ruler------------------------------------------------------|
 ephoto: ephoto (Image viewer)
 ephoto:
-ephoto: The best terminal emulator written with the EFL.
-ephoto:
+ephoto: Ephoto is a comprehensive image/photo viewer written
+ephoto: in C and using the Enlightened Foundation Libraries.
 ephoto:
 ephoto: https://www.enlightenment.org
 ephoto:
