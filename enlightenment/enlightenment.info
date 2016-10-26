@@ -1,6 +1,6 @@
 PRGNAM="enlightenment"
 VERSION="0.21.3"
-HOMEPAGE="https://www.enlightenment.org/"
+HOMEPAGE="https://www.enlightenment.org/about-enlightenment"
 DOWNLOAD="https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-$VERSION.tar.xz"
 MD5SUM=""
 DOWNLOAD_x86_64=""
