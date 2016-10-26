@@ -5,15 +5,15 @@
 # You must make exactly 11 lines for the formatting to be correct.  It's also
 # customary to leave one space after the ':' except on otherwise blank lines.
 
-           |-----handy-ruler------------------------------------------------------|
-terminology: terminology (terminal emulator)
-terminology:
-terminology: The best terminal emulator written with the EFL.
-terminology:
-terminology:
-terminology: homepage: https://www.enlightenment.org
-terminology:
-terminology:
-terminology:
-terminology:
-terminology:
+    |-----handy-ruler------------------------------------------------------|
+rage: rage (Video player)
+rage:
+rage: Rage is a video and audio player written with 
+rage: Enlightenment Foundation Libraries with some 
+rage: extra bells and whistles. 
+rage:
+rage:
+rage: homepage: https://www.enlightenment.org
+rage:
+rage:
+rage:
