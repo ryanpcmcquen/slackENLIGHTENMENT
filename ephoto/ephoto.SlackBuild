@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Slackware build script for rage
+# Slackware build script for ephoto
 
 # Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
 
@@ -22,7 +22,7 @@
 # along with this program (most likely, a file named COPYING). If
 # not, see <https://www.gnu.org/licenses/>.
 
-PRGNAM=rage
+PRGNAM=ephoto
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
 BUILD=${BUILD:-1sEL}
 
