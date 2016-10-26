@@ -8,11 +8,11 @@
       	  |-----handy-ruler------------------------------------------------------|
 python-efl: python-efl (python Binding for efl)
 python-efl:
-python-efl: This package provides Python2 bindings for efl
+python-efl: This package provides Python2 bindings for efl.
 python-efl:
 python-efl:
 python-efl:
-python-efl: python-efl home page is: https://www.enlightenment.org/
+python-efl: https://www.enlightenment.org/
 python-efl:
 python-efl:
 python-efl:
