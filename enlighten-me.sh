@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Ryan P.C. McQuen | Everett, WA | ryan.q@linux.com
+# Ryan P.C. McQuen | Everett, WA | ryanpcmcquen@member.fsf.org
 
 # Copyright 2013 Willy Sudiarto Raharjo <willysr@slackware-id.org>
 # All rights reserved.
