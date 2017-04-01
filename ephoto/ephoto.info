@@ -1,5 +1,5 @@
 PRGNAM="ephoto"
-VERSION="1.0-beta2"
+VERSION="1.0-beta3"
 HOMEPAGE="https://www.enlightenment.org/about-ephoto"
 DOWNLOAD="http://www.smhouston.us/stuff/ephoto-$VERSION.tar.xz"
 MD5SUM=""
