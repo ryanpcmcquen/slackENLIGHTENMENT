@@ -83,6 +83,7 @@ LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
   --enable-fb \
   --disable-tslib \
   --disable-static \
+  --disable-systemd \
   --with-profile=release \
   --enable-lua-old \
   --enable-image-loader-xyz=auto \
