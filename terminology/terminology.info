@@ -1,5 +1,5 @@
 PRGNAM="terminology"
-VERSION="1.1.0"
+VERSION="1.1.1"
 HOMEPAGE="https://www.enlightenment.org/about-terminology"
 DOWNLOAD="https://download.enlightenment.org/rel/apps/terminology/terminology-$VERSION.tar.xz"
 MD5SUM=""
