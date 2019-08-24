@@ -68,13 +68,14 @@ LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
   --disable-systemd \
   --with-profile=release \
   --enable-lua-old \
-  --enable-image-loader-xyz=auto \
   --enable-xinput22 \
   --enable-multisense \
+  --enable-xine \
+  --enable-libvlc \
   --build=$ARCH-slackware-linux
 
-make -j1
-make -j1 install DESTDIR=$PKG
+make -j2
+make -j2 install DESTDIR=$PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
