@@ -58,7 +58,7 @@ meson \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  -Dmount-eeze=true\
+  -Dmount-eeze=true \
   -Dpam=false \
   -Dsystemd=false \
   . build
