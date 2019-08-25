@@ -6,7 +6,7 @@
 
 PRGNAM=efl
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
-BUILD=${BUILD:-1sEL}
+BUILD=${BUILD:-2sEL}
 
 if [ -z "$ARCH" ]; then
   case "$(uname -m)" in
@@ -70,6 +70,7 @@ LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
   --enable-lua-old \
   --enable-xinput22 \
   --enable-multisense \
+  --enable-image-loader-webp \
   --enable-xine \
   --enable-libvlc \
   --build=$ARCH-slackware-linux
