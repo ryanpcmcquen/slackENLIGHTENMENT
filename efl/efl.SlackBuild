@@ -6,7 +6,7 @@
 
 PRGNAM=efl
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
-BUILD=${BUILD:-2sEL}
+BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
   case "$(uname -m)" in
