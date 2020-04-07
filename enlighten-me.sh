@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Ryan P. C. McQuen | Everett, WA | ryanpcmcquen@member.fsf.org
+# Ryan P. C. McQuen | Everett, WA
 
 # This is where all the compilation and final results will be placed
 TMP=${TMP:-/tmp}
