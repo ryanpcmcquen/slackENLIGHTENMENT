@@ -2,7 +2,7 @@
 
 # Slackware build script for ephoto
 
-# Ryan P. C. McQuen | Everett, WA | ryanpcmcquen@member.fsf.org
+# Ryan P. C. McQuen | Everett, WA
 
 PRGNAM=ephoto
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
