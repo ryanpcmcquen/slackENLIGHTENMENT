@@ -50,39 +50,30 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-autoreconf -vi
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
-./configure \
+meson \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --enable-harfbuzz \
-  --enable-fb \
-  --disable-tslib \
-  --disable-static \
-  --disable-systemd \
-  --with-profile=release \
-  --enable-lua-old \
-  --enable-xinput22 \
-  --enable-multisense \
-  --enable-image-loader-webp \
-  --enable-xine \
-  --enable-libvlc \
-  --build=$ARCH-slackware-linux
+  -Dfb=true \
+  -Ddrm=true \
+  -Dopengl=full \
+  -Dsystemd=false \
+  . build
+  
 
-make -j2
-make -j2 install DESTDIR=$PKG
+ninja -C build -v
+DESTDIR=$PKG ninja -C build -v install
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a ABOUT-NLS AUTHORS COMPLIANCE COPYING ChangeLog INSTALL NEWS README \
+cp -a AUTHORS COMPLIANCE COPYING ChangeLog INSTALL NEWS README \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
