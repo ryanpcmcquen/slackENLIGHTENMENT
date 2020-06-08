@@ -7,7 +7,7 @@ I've made what I like to call a 'greatest hits' of their work.
 We have the standard SBo style here thanks to Willy and some reduced dependencies thanks to GArik! These scripts are nearly a blatant copy of his work (with the ```sEL``` tag), and an automatic build script that gets the dependencies using sbopkg. 
 I have also added some configure flags and explicitly set MAKEFLAGS where necessary.
 
-## WARNING: 14.1 is no longer supported!!!
+## WARNING: 14.2 is no longer supported!!!
 
 Simply run:
 
