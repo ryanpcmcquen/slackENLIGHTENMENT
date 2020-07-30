@@ -1,9 +1,5 @@
 #!/bin/sh
-
 # Slackware build script for efl
-
-# Ryan P. C. McQuen | Everett, WA
-
 PRGNAM=efl
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
 BUILD=${BUILD:-2sEL}
@@ -59,11 +55,13 @@ meson \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
+  -Davahi=false \
+  -Ddrm=false \
   -Dfb=true \
-  -Ddrm=true \
+  -Ddrm-deprecated=false \
   -Dopengl=full \
   -Dsystemd=false \
-  -Dwl=true \
+  -Dwl=false \
   . build
   
 
