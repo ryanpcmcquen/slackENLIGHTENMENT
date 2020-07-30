@@ -1,12 +1,8 @@
 #!/bin/sh
-
 # Slackware build script for terminology
-
-# Ryan P. C. McQuen | Everett, WA
-
 PRGNAM=terminology
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
-BUILD=${BUILD:-2sEL}
+BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
   case "$(uname -m)" in
