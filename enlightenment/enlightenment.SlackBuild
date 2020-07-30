@@ -1,12 +1,8 @@
 #!/bin/sh
-
 # Slackware build script for enlightenment
-
-# Ryan P. C. McQuen | Everett, WA
-
 PRGNAM=enlightenment
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
-BUILD=${BUILD:-2sEL}
+BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
   case "$(uname -m)" in
@@ -61,7 +57,6 @@ meson \
   -Dmount-eeze=true \
   -Dpam=true \
   -Dsystemd=false \
-  -Dwl=true \
   . build
 
 ninja -C build -v
