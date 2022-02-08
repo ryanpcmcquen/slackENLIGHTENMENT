@@ -33,4 +33,4 @@ The script will automatically add ```[0-9]+sEL``` to /etc/slackpkg/blacklist, so
 Enjoy!
 
 Note:
-You will need to remove all ```sEL``` packages before installing/upgrading to a newer version to ensure that all libraries all linked to the proper version.
+You will need to remove all ```sEL``` packages before installing/upgrading to a newer version to ensure that all libraries are linked to the proper version.
