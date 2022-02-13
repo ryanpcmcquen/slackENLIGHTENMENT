@@ -2,7 +2,7 @@
 # Slackware build script for enlightenment
 PRGNAM=enlightenment
 VERSION=$(echo $PRGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)
-BUILD=${BUILD:-2sEL}
+BUILD=${BUILD:-1sEL}
 
 if [ -z "$ARCH" ]; then
   case "$(uname -m)" in
@@ -61,6 +61,7 @@ meson \
 
 ninja -C build -v
 DESTDIR=$PKG ninja -C build -v install
+
 # Don't clobber config files on upgrades:
 mv $PKG/etc/enlightenment/sysactions.conf $PKG/etc/enlightenment/sysactions.conf.new
 mv $PKG/etc/xdg/menus/e-applications.menu $PKG/etc/xdg/menus/e-applications.menu.new

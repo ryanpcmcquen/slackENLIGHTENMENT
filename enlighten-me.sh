@@ -21,17 +21,19 @@ sbopkg -r
 sbo_pkg_install lua
 sbo_pkg_install luajit
 sbo_pkg_install bullet
-sbo_pkg_install libwebp
 
 # get source balls
 sh download.sh
 
 # Loop for all packages:
 for dir in \
+  scim \
   efl \
   python-efl \
   enlightenment \
   terminology \
+  ephoto \
+  rage \
   ; do
   # get the package name
   package=$(echo $dir | cut -f2- -d /) 

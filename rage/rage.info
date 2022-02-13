@@ -1,5 +1,5 @@
 PRGNAM="rage"
-VERSION="0.3.1"
+VERSION="0.4.0"
 HOMEPAGE="https://www.enlightenment.org/about-rage"
 DOWNLOAD="https://download.enlightenment.org/rel/apps/rage/rage-$VERSION.tar.xz"
 MD5SUM=""
