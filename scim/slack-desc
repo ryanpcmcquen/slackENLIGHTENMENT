@@ -5,14 +5,14 @@
 # You must make exactly 11 lines for the formatting to be correct.  It's also
 # customary to leave one space after the ':' except on otherwise blank lines.
 
-      	  |-----handy-ruler------------------------------------------------------|
-scim: scim (python Binding for efl)
+    |-----handy-ruler------------------------------------------------------|
+scim: scim (Smart Common Input Method)
 scim:
-scim: This package provides Python2 bindings for efl.
+scim: The Smart Common Input Method platform.
 scim:
 scim:
 scim:
-scim: https://www.enlightenment.org/
+scim: https://github.com/scim-im/scim
 scim:
 scim:
 scim:
