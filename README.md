@@ -15,18 +15,21 @@ Simply run:
     cd slackENLIGHTENMENT/
     sh enlighten-me.sh
 
-All the tarballs will be downloaded, built and installed.  Pulseaudio is no longer part of the build, and sound works in Firefox, Chromium, Spotify and Steam. The only thing you are losing out on is Enlightenment's interface sounds.
+All the tarballs will be downloaded, built and installed.
 
 Any dependencies will be grabbed with ```sbopkg``` so make sure you have it!
 
 Enjoy!
 
 
-Complete Build Order :
+Complete Build Order:
+- scim
 - efl
-- terminology
 - python-efl
 - enlightenment
+- terminology
+- ephoto
+- rage
 
 The script will automatically add ```[0-9]+sEL``` to /etc/slackpkg/blacklist, so the packages won't be removed when you run ```slackpkg clean-system```.
 
